@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jonathanchirwa.sounddemo.MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="276dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/layt"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="39dp"
+        app:layout_constraintHorizontal_bias="0.066" />
+
+    <SeekBar
+        android:id="@+id/mediaBar"
+        android:layout_width="272dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/volumeText"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="35dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.086" />
+
+    <TextView
+        android:id="@+id/mediaText"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="0dp"
+        android:paddingLeft="10dp"
+        android:text="Seek"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/mediaBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/seekBar"
+        app:layout_constraintRight_toRightOf="@+id/volumeText"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/volumeText"
+        android:layout_width="180dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="0dp"
+        android:alpha="1.0"
+        android:paddingLeft="10dp"
+        android:text="Volume"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:layout_marginStart="2dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/seekBar"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/textShown"
+        android:layout_width="240dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="-35dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginStart="60dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/mediaText"
+        app:layout_constraintLeft_toLeftOf="@+id/mediaText"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <LinearLayout
+        android:id="@+id/layt"
+        android:layout_width="322dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="-7dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        android:paddingRight="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintLeft_creator="1">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.36"
+            android:onClick="play"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:onClick="pause"
+            android:paddingEnd="20dp"
+            android:paddingRight="40dp"
+            android:text="Pause" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="235dp"
+        app:srcCompat="@drawable/playerbg"
+        tools:layout_editor_absoluteX="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textShown"
+        tools:layout_editor_absoluteY="58dp" />
+</android.support.constraint.ConstraintLayout>
